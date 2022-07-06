@@ -14,7 +14,7 @@ const Header = () => {
   const firebaseAuth = getAuth(app);
   const provider = new GoogleAuthProvider();
 
-  const[{user}, dispatch] = useStateValue();
+  const[{user, cartShow, cartItems}, dispatch] = useStateValue();
 
   const [isMenu, setIsMenu] = useState(false);
 
@@ -42,6 +42,13 @@ const Header = () => {
     });
   };
 
+  const showCart = () =>{
+    dispatch({
+      type: actionType.SET_SHOW_CART,
+      cartShow : !cartShow,
+    });
+  }
+
   return (
     <header className="fixed z-50 w-screen p-3 px-4 md:p-6 md:px-16 bg-primary">
         {/* desktop && tablet */}
@@ -60,11 +67,14 @@ const Header = () => {
             <li className='text-base text-texteColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer'>Service</li>
         </motion.ul>
 
-        <div className="relative flex items-center justify-center ">
+        <div className="relative flex items-center justify-center " onClick={showCart}>
             < FaCartPlus className='text-textColor text-2xl  cursor-pointer'/>
-            <div className=" absolute -top-2 -right-3 w-5 h-5 rounded-full  bg-cartNumBg flex items-center justify-center">
-                <p className='text-xs text-white fontr-semibold'>2</p>
+            
+           {cartItems && cartItems.length > 0 && (
+             <div className=" absolute -top-2 -right-3 w-5 h-5 rounded-full  bg-cartNumBg flex items-center justify-center">
+                <p className='text-xs text-white fontr-semibold'>{cartItems.length}</p>
             </div>
+           )}
         </div>
         <div className="relative"> 
           <motion.img 
@@ -108,11 +118,14 @@ const Header = () => {
      
      <div className="flex items-center  justify-between md:hidden w-full h-full"> 
 
-     <div className="relative flex items-center justify-center ">
+     <div className="relative flex items-center justify-center " onClick={showCart}>
             < FaCartPlus className='text-textColor text-2xl  cursor-pointer'/>
-            <div className=" absolute -top-2 -right-3 w-5 h-5 rounded-full  bg-cartNumBg flex items-center justify-center">
-                <p className='text-xs text-white fontr-semibold'>2</p>
+            {/* display the red number fatre adding items on the cart  */}
+            {cartItems && cartItems.length > 0 && (
+             <div className=" absolute -top-2 -right-3 w-5 h-5 rounded-full  bg-cartNumBg flex items-center justify-center">
+                <p className='text-xs text-white fontr-semibold'>{cartItems.length}</p>
             </div>
+           )}
         </div>
        <Link to={"/"} className="flex items-center gap-2"><img src={Logo} className="w-9 object-cover" alt="logo" />
           <p className="text-headingColor text-xl font-bold">Elle&Moi</p>

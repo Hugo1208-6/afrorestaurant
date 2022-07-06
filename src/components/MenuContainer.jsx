@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+ import React, {useState, useEffect} from 'react'
 import { MdFastfood } from 'react-icons/md'
 import {categories} from '../Utils/data'
 import { motion } from 'framer-motion';
