@@ -14,11 +14,9 @@ const [scrollValue, setScrollValue] = useState(0)
   useEffect(() => {}, [scrollValue, cartShow]);
   
   return (
-    <div className=' w-full  h-auto flex flex-col items-center justify-center'>
+    <div className=' w-full  h-auto flex flex-col items-center gap-12 justify-center'>
      <HomeContainer/>
-
-
-     <section className='w-full my-6'>
+     <section className='w-full py-8'>
       <div className='w-full flex items-center justify-between'>
         <p className='text-2xl font-semibold capitalize 
         text-headingColor relative before:absolute
