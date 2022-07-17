@@ -112,7 +112,7 @@ const CartContainer = () => {
           <div className='w-full h-full flex flex-col items-center justify-center gap-6'>
             <img src={EmptyCart} className="w-300" alt=""/>
             <p className='text-xl text-textColor font-semibold'>
-              Add some itemes to your cart
+              Add some items to your cart
             </p>
           </div>
          )}

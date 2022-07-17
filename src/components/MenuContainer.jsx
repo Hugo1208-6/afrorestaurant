@@ -25,7 +25,7 @@ const MenuContainer = ({flag}) => {
          </p>
           
 {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-         <div className={`w-full flex items-center justify-start lg:justify-start gap-8 py-6 scroll-smooth my-12 ${flag ? "overflow-x-scroll scrollbar-none" : "overflow-x-hidden flex-wrap justify-start"}`}>
+         <div className={`w-full flex items-center justify-between lg:justify-center gap-8 py-6 scroll-smooth my-12 ${flag ? "overflow-x-scroll scrollbar-none" : "overflow-x-hidden flex-wrap justify-center"}`}>
           {categories && categories.map(category => (
           
           <motion.div whileTap={{scale: 0.75}} key={category.id} className={`group ${filter === category.urlParamName ? 'bg-cartNumBg' : 'bg-card'} w-24 min-w-[94px] h-28 cursor-pointer rounded-lg drop-shadow-xl 

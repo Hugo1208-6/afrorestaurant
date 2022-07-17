@@ -36,10 +36,12 @@ const RowContainer = ({ flag, data, scrollValue}) => {
     <div
     ref = {RowContainer}
     
-     className={`w-full flex items-center gap-3 scroll-smooth my-12 ${flag ? "overflow-x-scroll scrollbar-none" : "overflow-x-hidden flex-wrap justify-center"}`}>
+     className={` w-full flex items-center gap-3 scroll-smooth my-12 ${flag ? "overflow-x-scroll scrollbar-none" : "overflow-x-hidden flex-wrap justify-center drop-shadow-lg"}`}>
       {data && data.length > 0 ? (
       data.map((item) => (
-        <div key={item?.id} className=' w-275 h-[155px] min-w-[275px] md:w-300 md:min-w-[300px]  bg-cardOverlay rounded-lg my-12 hover:drop-shadow-lg backdrop-blur-lg py-2 px-4
+        <div key={item?.id} className=' w-275 h-[155px] min-w-[275px] md:w-300 md:min-w-[300px]  bg-white rounded-lg my-12 hover:drop-shadow-lg
+        
+        backdrop-blur-lg py-2 px-4
         flex flex-col items-center justify-between'>
         <div className='w-full flex items-center justify-between'>
          <motion.div className='w-40 h-40 -mt-14 overflow-hidden drop-shadow-2xl' whileHover={{ scale:1.2}} ><img src={item?.imageURL} alt="" className='w-ful h-full object-contain' /></motion.div> 
