@@ -19,9 +19,9 @@ const HomeContainer = () => {
         <span className=' text-orange-600 text-[2.4rem] lg:text-[5rem]'> raleigh North Carolina</span> </p>
 
         <p className=' text-base text-textColor text-center md:text-left md:w-[100%]'>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-          Natus enim quos quasi, quisquam saepe, ab unde ratione, ut eos dolore ea. 
-          Tenetur illo dolore saepe? Ex doloribus tenetur iusto. Sint.</p>
+          The Restaurant at the End of the Universe is one of the most extraordinary ventures 
+          in the entire history of catering. It has been built on the fragmented remains of…it will be built on
+           the fragmented..that is to say it will have been built by this time, and indeed has been</p>
 
           <button type='Button'
            className=' bg-gradient-to-br from-orange-400 to-orange-500
